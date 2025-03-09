@@ -1,0 +1,80 @@
+Day 5
+--------
+Scripts
+----
+
+Pre-request scripts
+Tests
+
+Pre-requestScript ---->	Request---->Response-- Tests
+
+Collection
+Folder
+Request
+
+Variables
+----
+what?
+why?
+where?
+
+Scope
+----------
+workspace--->collections--->requests
+
+Global -- accessible in workspace
+Collection -- accessible within collection
+Environment -- accessible in all collections, but we need to switch to particulur enviroment.
+
+Local -- accessible only within request(specific to equest)
+
+	//Local varaibles
+	pm.variables.set("url_local","https://reqres.in");
+
+data - external files csv/text...
+
+
+url_global
+url_collect
+url_qa_env
+
+refering varaibles    {{variable }}
+
+creating varaibles using pre-request scripts
+---------
+//Local varaibles
+pm.variables.set("url_local","https://reqres.in");
+
+//Global variable
+pm.globals.set("userid_global","2");
+
+//Environement varaible
+pm.environment.set("userid_qa_env","2");
+
+//Collection variable
+pm.collectionVariables.set("userid_collect","2");
+
+Unset/remove variables using script
+----------------
+
+//Global variable
+//pm.globals.unset("userid_global");
+
+//Environement varaible
+//pm.environment.unset("userid_qa_env");
+
+//Collection variable
+pm.collectionVariables.unset("userid_collect");
+
+capture the values from varaibles
+-----
+console.log(pm.globals.get("userid_global"));
+console.log(pm.environment.get("userid_qa_env"));
+console.log(pm.collectionVariables.get("userid_collect"));
+console.log(pm.variables.get("url_local"));
+
+
+set - global, env, collection, local
+unset -  global, env, collection, local
+get -  global, env, collection, local
+
