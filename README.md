@@ -4,3 +4,5 @@ This Project  Automate the random Websites inorder to achieve GUI and End to End
 
 Using Chai Library, Cypress Framework and Javascript Programming languag along with HTML, CSS. 
 
+All asertions can be found here : cypress/e2e
+
